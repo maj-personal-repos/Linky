@@ -1,6 +1,6 @@
 # Linky
 
-[![CI Status](http://img.shields.io/drmaj/Linky.svg?style=flat)](https://travis-ci.org/drmaj/Linky)
+[![CI Status](http://img.shields.io/travis/drmaj/Linky.svg?style=flat)](https://travis-ci.org/drmaj/Linky)
 [![Version](https://img.shields.io/cocoapods/v/Linky.svg?style=flat)](http://cocoadocs.org/docsets/Linky)
 [![License](https://img.shields.io/cocoapods/l/Linky.svg?style=flat)](http://cocoadocs.org/docsets/Linky)
 [![Platform](https://img.shields.io/cocoapods/p/Linky.svg?style=flat)](http://cocoadocs.org/docsets/Linky)
