@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Linky', :exclusive => true do
+  pod "Linky", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "Linky", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
