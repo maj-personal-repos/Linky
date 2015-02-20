@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4KA-TI-riY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Maj Second View Controller-->
+        <scene sceneID="7Az-tW-m2E">
+            <objects>
+                <viewController id="4KA-TI-riY" customClass="majSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s4d-5V-gwR"/>
+                        <viewControllerLayoutGuide type="bottom" id="f8u-sp-jwr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4cl-lA-2KH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-9R-EQn">
+                                <rect key="frame" x="210" y="214.5" width="180" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO7-DK-u6d">
+                                <rect key="frame" x="280" y="285" width="40" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Close"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="4KA-TI-riY" eventType="touchUpInside" id="GUZ-Qe-H0c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="Second View"/>
+                        <constraints>
+                            <constraint firstItem="oO7-DK-u6d" firstAttribute="top" secondItem="ZOv-9R-EQn" secondAttribute="bottom" constant="50" id="09z-Ro-6Nm"/>
+                            <constraint firstAttribute="centerX" secondItem="ZOv-9R-EQn" secondAttribute="centerX" id="ZTA-qN-VDc"/>
+                            <constraint firstAttribute="centerX" secondItem="oO7-DK-u6d" secondAttribute="centerX" id="k3t-3R-yO7"/>
+                            <constraint firstAttribute="centerY" secondItem="oO7-DK-u6d" secondAttribute="centerY" id="sLH-uw-8pA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYo-ff-rDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="422"/>
+        </scene>
+    </scenes>
+</document>

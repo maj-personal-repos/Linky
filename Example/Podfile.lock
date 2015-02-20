@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.3.2)
+  - Linky (0.1.0)
+  - Specta (0.3.2)
+
+DEPENDENCIES:
+  - Expecta
+  - Linky (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  Linky:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
+  Linky: 74a07903b4a7cb98680690e095d5b1ec761c11ab
+  Specta: 698a58ffa5ec948327d3b92eab50ca58d7f4fbe8
+
+COCOAPODS: 0.34.4
