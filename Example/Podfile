@@ -6,7 +6,10 @@ end
 
 target 'Tests', :exclusive => true do
   pod "Linky", :path => "../"
-
+  pod 'KIF'
   pod 'Specta'
   pod 'Expecta'
+  pod 'OCHamcrest'
+  pod 'OCMock'
+  pod 'PivotalCoreKit/UIKit/SpecHelper/Extensions'
 end

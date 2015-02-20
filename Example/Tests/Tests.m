@@ -1,43 +1,50 @@
-//
-//  LinkyTests.m
-//  LinkyTests
-//
-//  Created by Miguel Alonso Jr. on 02/20/2015.
-//  Copyright (c) 2014 Miguel Alonso Jr.. All rights reserved.
-//
+#import "Specs.h"
 
-SpecBegin(InitialSpecs)
+SpecBegin(Spec)
 
-describe(@"these will fail", ^{
+describe(@"", ^{
 
-    it(@"can do maths", ^{
-        expect(1).to.equal(2);
+    beforeEach(^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *viewController = [storyboard instantiateInitialViewController];
+        [UIApplication sharedApplication].delegate.window.rootViewController = viewController;
     });
 
-    it(@"can read", ^{
-        expect(@"number").to.equal(@"string");
+    afterEach(^{
     });
-    
-    it(@"will wait and fail", ^AsyncBlock {
-        
-    });
-});
 
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
-    });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^AsyncBlock {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            done();
+    describe(@"when a user taps on navigation segue button", ^{
+        beforeEach(^{
+            [tester waitForViewWithAccessibilityLabel:@"Main View"];
+            [tester tapViewWithAccessibilityLabel:@"Navigation Segue"];
+        });
+        it(@"should segue into the first view controller", ^{
+            [tester waitForViewWithAccessibilityLabel:@"First View"];
         });
     });
+
+    describe(@"when a user taps on modal segue button", ^{
+        beforeEach(^{
+            [tester waitForViewWithAccessibilityLabel:@"Main View"];
+            [tester tapViewWithAccessibilityLabel:@"Modal Segue"];
+        });
+        it(@"should segue into the second view controller", ^{
+            [tester waitForViewWithAccessibilityLabel:@"Second View"];
+        });
+    });
+
+    describe(@"when a user taps on the close button from the second view", ^{
+        beforeEach(^{
+            [tester waitForViewWithAccessibilityLabel:@"Main View"];
+            [tester tapViewWithAccessibilityLabel:@"Modal Segue"];
+            [tester waitForViewWithAccessibilityLabel:@"Second View"];
+            [tester tapViewWithAccessibilityLabel:@"Close"];
+        });
+        it(@"should return to the main view", ^{
+            [tester waitForViewWithAccessibilityLabel:@"Main View"];
+        });
+    });
+    
 });
 
 SpecEnd
