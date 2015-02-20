@@ -10,19 +10,17 @@
 Pod::Spec.new do |s|
   s.name             = "Linky"
   s.version          = "0.1.0"
-  s.summary          = "A short description of Linky."
+  s.summary          = "Linky is a cocoapod that provides two custom segues, LinkStoryboardSegue and LinkStoryboardModalSegue."
   s.description      = <<-DESC
-                       An optional longer description of Linky
+                       Linky is a cocoapod that provides two custom segues, LinkStoryboardSegue and LinkStoryboardModalSegue, allowing the UI to be broken up into separate storyboards. This allows for multiple developers to work on the UI design without having to painstakingly merge a single storyboard.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/Linky"
+  s.homepage         = "https://github.com/drmaj/Linky"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Miguel Alonso Jr." => "drmiguelalonsojr@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/Linky.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/drmaj/Linky.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/drmajr'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
